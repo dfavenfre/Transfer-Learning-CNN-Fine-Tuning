@@ -1,0 +1,48 @@
+{
+    "method": "random",
+    "name": "fv101 | EfficientNetV2B0_model_0 sweep",
+    "metric": {
+        "goal": "minimize",
+        "name": "val_acc"
+    },
+    "parameters": {
+        "optimizers": {
+            "values": [
+                "adam",
+                "sgd"
+            ]
+        },
+        "batch_size": {
+            "values": [
+                8,
+                16,
+                32,
+                64
+            ]
+        },
+        "epochs": {
+            "values": [
+                300
+            ]
+        },
+        "lr": {
+            "values": [
+                0.001,
+                1e-05,
+                1e-07
+            ]
+        },
+        "early_stopping_patience": {
+            "values": [
+                10,
+                15
+            ]
+        },
+        "k_value": {
+            "values": [
+                0.1,
+                0.09
+            ]
+        }
+    }
+}
